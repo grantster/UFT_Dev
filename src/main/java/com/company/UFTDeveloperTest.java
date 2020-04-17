@@ -40,7 +40,7 @@ public class UFTDeveloperTest extends UnitTestClassBase {
     }
 
     @Test
-    public void test() throws GeneralLeanFtException {
+    public void test() throws GeneralLeanFtException, InterruptedException {
         Browser browser = BrowserFactory.launch(BrowserType.CHROME);
 
         browser.sync();
@@ -105,12 +105,30 @@ public class UFTDeveloperTest extends UnitTestClassBase {
                 .tagName("SPAN").build());
         Verify.areEqual("$1,009.00", webElement.getInnerText(), "Verification", "Verify property: innerText");
 
-        WebElement rEMOVEWebElement = browser.describe(WebElement.class, new WebElementDescription.Builder()
-                .innerText("REMOVE")
-                .tagName("A").build());
-        rEMOVEWebElement.click();
+        //removed when using App Model
+        //WebElement rEMOVEWebElement = browser.describe(WebElement.class, new WebElementDescription.Builder()
+        //       .innerText("REMOVE")
+        //        .tagName("A").build());
+        //rEMOVEWebElement.click();
 
         hOMELink.click();
+        // Using App Models
+        //
+        //
+        AOS_Application_Model appModel = new AOS_Application_Model(browser);
+        appModel.aCart().click();
+
+        //Thread.sleep(5000);
+
+        appModel.aCheckOutBtnButton().click();
+        appModel.aUsernameInOrderPaymentEditField().setValue("david.grant");
+        appModel.aPasswordInOrderPaymentEditField().setValue("Password1");
+        // no account
+        // appModel.aLoginBtnundefinedButton().click();
+        appModel.aCart().click();
+        appModel.aREMOVEWebElement().click();
+
+        browser.close();
 
     }
 
