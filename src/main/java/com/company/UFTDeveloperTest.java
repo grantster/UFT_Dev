@@ -118,14 +118,16 @@ public class UFTDeveloperTest extends UnitTestClassBase {
         AOS_Application_Model appModel = new AOS_Application_Model(browser);
         appModel.aCart().click();
 
-        //Thread.sleep(5000);
-
+        //Thread.sleep(5000); not needed used for debug
+        // aCheckout needs a regular expression if multiple items as $ value changes
         appModel.aCheckOutBtnButton().click();
         appModel.aUsernameInOrderPaymentEditField().setValue("david.grant");
         appModel.aPasswordInOrderPaymentEditField().setValue("Password1");
         // no account
         // appModel.aLoginBtnundefinedButton().click();
         appModel.aCart().click();
+
+        // will need a loop to remove multiple items
         appModel.aREMOVEWebElement().click();
 
         browser.close();
