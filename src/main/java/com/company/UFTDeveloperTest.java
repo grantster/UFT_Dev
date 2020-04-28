@@ -128,7 +128,26 @@ public class UFTDeveloperTest extends UnitTestClassBase {
         appModel.aCart().click();
 
         // will need a loop to remove multiple items
-        appModel.aREMOVEWebElement().click();
+
+
+        String InText = new String("");
+//        do {WebElement body = browser.describe(Link.class, new LinkDescription.Builder()
+//                        .accessibilityName("ShoppingCart")
+//                        .role("link")
+//                        .tagName("A").build());
+//                    InText = body.getInnerText();
+//                    System.out.print(InText);
+//                    appModel.aREMOVEWebElement().click();
+//                } while(InText!="0 ");
+
+
+//        WebElement shoppingLinkCart = browser.describe(Link.class, new LinkDescription.Builder()
+//                .accessibilityName("ShoppingCart")
+//                .role("link")
+//                .tagName("A").build());
+//        InText = shoppingLinkCart.getInnerText();
+//                    System.out.print(InText);
+
 
         browser.close();
 
