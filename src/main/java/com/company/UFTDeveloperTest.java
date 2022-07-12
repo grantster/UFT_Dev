@@ -110,6 +110,7 @@ public class UFTDeveloperTest extends UnitTestClassBase {
         rEMOVEWebElement.click();
 
         hOMELink.click();
+        //Record here
 
     }
 
