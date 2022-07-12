@@ -1,7 +1,6 @@
 package com.company;
 
 import com.hp.lft.sdk.GeneralLeanFtException;
-import com.hp.lft.sdk.*;
 import com.hp.lft.sdk.web.*;
 import com.hp.lft.verifications.Verify;
 import org.junit.After;

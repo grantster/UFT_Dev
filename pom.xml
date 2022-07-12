@@ -29,9 +29,26 @@
             <artifactId>unittesting</artifactId>
             <version>15.0.0</version>
         </dependency>
-
-
-
+        <dependency>
+            <groupId>com.hp.lft</groupId>
+            <artifactId>sdk</artifactId>
+            <version>2021.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.lft</groupId>
+            <artifactId>verifications</artifactId>
+            <version>2021.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.lft</groupId>
+            <artifactId>report</artifactId>
+            <version>2021.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.lft</groupId>
+            <artifactId>unittesting</artifactId>
+            <version>2021.1.0</version>
+        </dependency>
 
 
     </dependencies>
